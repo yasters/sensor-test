@@ -3,15 +3,15 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class GPSRenderer : MonoBehaviour {
-	public GPSUpdater updater;
+	public GPSUpdater GUpdater;
 	public Text text;
 
 	void Update() {
-		text.text = updater.Status.ToString()
-				  + "\n" + "lat:" + updater.Location.latitude.ToString()
-				  + "\n" + "lng:" + updater.Location.longitude.ToString()
-				  + "\n" + "speed:" + updater.speed.ToString()
-				  + "\n" + "timestamp:" + updater.Location.timestamp.ToString()
-				  + "\n" + "time:" + updater.time.ToString();
+		text.text = GUpdater.Status.ToString()
+				  + "\n" + "lat:" + GUpdater.Location.latitude.ToString()
+				  + "\n" + "lng:" + GUpdater.Location.longitude.ToString()
+				  + "\n" + "speed:" + GUpdater.speed.ToString()
+				  + "\n" + "timestamp:" + GUpdater.Location.timestamp.ToString()
+				  + "\n" + "time:" + GUpdater.time.ToString();
 	}
 }

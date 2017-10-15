@@ -42,7 +42,7 @@ public class GPSUpdater : MonoBehaviour {
 			dy = R_EARTH * (lat2 - lat1);
 
 			distance = Mathf.Sqrt(dx * dx + dy * dy);
-			time = timestamp2 - timestamp1;
+			time = timestamp1 - timestamp2;
 			if (time == 0) {
 				speed = 0;
 			} else {

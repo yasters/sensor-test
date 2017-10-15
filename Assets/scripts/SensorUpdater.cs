@@ -1,23 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InputCheck : MonoBehaviour {
+public class SensorUpdater : MonoBehaviour {
 	public Vector3 acceleration;
 	public Compass compass;
 	public Quaternion gyro;
 	public GUIStyle labelStyle;
 
 	void Start() {
-		//フォント生成
-		this.labelStyle = new GUIStyle();
-		this.labelStyle.fontSize = Screen.height / 22;
-		this.labelStyle.normal.textColor = Color.white;
-
 		Input.compass.enabled = true;
-
-		Debug.Log(string.Format("<b>精度</b>：{0}", Input.compass.headingAccuracy));
-		Debug.Log(string.Format("<b>タイムスタンプ</b>：{0}", Input.compass.timestamp));
-
 		Input.gyro.enabled = true;
 	}
 
@@ -27,7 +18,7 @@ public class InputCheck : MonoBehaviour {
 		this.gyro = Input.gyro.attitude;
 	}
 
-	void OnGUI() {
+/**	void OnGUI() {
 		if (acceleration != null) {
 			float x = Screen.width / 10;
 			float y = 0;
@@ -83,4 +74,5 @@ public class InputCheck : MonoBehaviour {
 			}
 		}
 	}
+	**/
 }
